@@ -1,0 +1,82 @@
+1407  execve("./parent", ["./parent"], 0x7ffff1dc8038 /* 19 vars */) = 0
+1407  arch_prctl(0x3001 /* ARCH_??? */, 0x7fffe5918840) = -1 EINVAL (Invalid argument)
+1407  mmap(NULL, 32530, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f8174c33000
+1407  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360q\2\0\0\0\0\0"..., 832) = 832
+1407  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8174c30000
+1407  mmap(NULL, 2036952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f8174a00000
+1407  mmap(0x7f8174a25000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000) = 0x7f8174a25000
+1407  mmap(0x7f8174b9d000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0x7f8174b9d000
+1407  mmap(0x7f8174be8000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f8174be8000
+1407  mmap(0x7f8174bee000, 13528, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8174bee000
+1407  arch_prctl(ARCH_SET_FS, 0x7f8174c31380) = 0
+1407  write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\270\320\274\321\217 \321\204\320\260\320\271\320\273\320\260"..., 33) = 33
+1407  read(0, "os2\n", 4096)            = 4
+1407  read(0, "34.452 435.23\n", 4096)  = 14
+1407  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f8174c31650) = 1408
+1407  write(4, "34.452 435.23\n\0\0\200\3\0\0\200\3\0\0\200\3\0\0\200\3\0\0"..., 255) = 255
+1408  read(3, "34.452 435.23\n\0\0\200\3\0\0\200\3\0\0\200\3\0\0\200\3\0\0"..., 255) = 255
+1407  read(0,  <unfinished ...>
+1408  execve("child.out", [" ", "os2\n", "34.452 435.23\n"], 0x7fffe5918928 /* 19 vars */) = 0
+1408  arch_prctl(0x3001 /* ARCH_??? */, 0x7ffff14b35c0) = -1 EINVAL (Invalid argument)
+1408  mmap(NULL, 32530, PROT_READ, MAP_PRIVATE, 4, 0) = 0x7f38b52e8000
+1408  read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360q\2\0\0\0\0\0"..., 832) = 832
+1408  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f38b52e0000
+1408  mmap(NULL, 2036952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x7f38b50e0000
+1408  mmap(0x7f38b5105000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x25000) = 0x7f38b5105000
+1408  mmap(0x7f38b527d000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x19d000) = 0x7f38b527d000
+1408  mmap(0x7f38b52c8000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x1e7000) = 0x7f38b52c8000
+1408  mmap(0x7f38b52ce000, 13528, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f38b52ce000
+1408  arch_prctl(ARCH_SET_FS, 0x7f38b52e1540) = 0
+1408  write(4, "469.682\n", 8)          = 8
+1408  exit_group(0)                     = ?
+1408  +++ exited with 0 +++
+1407  <... read resumed>0x7fffdd06d3c0, 4096) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+1407  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1408, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+1407  read(0, "34.2535 2424.43\n", 4096) = 16
+1407  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f8174c31650) = 1409
+1407  write(4, "34.2535 2424.43\n\0\3\0\0\200\3\0\0\200\3\0\0\200\3\0\0"..., 255) = 255
+1409  read(3, "34.2535 2424.43\n\0\3\0\0\200\3\0\0\200\3\0\0\200\3\0\0"..., 255) = 255
+1409  execve("child.out", [" ", "os2\n", "34.2535 2424.43\n"], 0x7fffe5918928 /* 19 vars */ <unfinished ...>
+1407  read(0,  <unfinished ...>
+1409  <... execve resumed>)             = 0
+1409  arch_prctl(0x3001 /* ARCH_??? */, 0x7fffdb3817e0) = -1 EINVAL (Invalid argument)
+1409  mmap(NULL, 32530, PROT_READ, MAP_PRIVATE, 4, 0) = 0x7fa2dc318000
+1409  read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360q\2\0\0\0\0\0"..., 832) = 832
+1409  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fa2dc350000
+1409  mmap(NULL, 2036952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x7fa2dc120000
+1409  mmap(0x7fa2dc145000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x25000) = 0x7fa2dc145000
+1409  mmap(0x7fa2dc2bd000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x19d000) = 0x7fa2dc2bd000
+1409  mmap(0x7fa2dc308000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x1e7000) = 0x7fa2dc308000
+1409  mmap(0x7fa2dc30e000, 13528, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fa2dc30e000
+1409  arch_prctl(ARCH_SET_FS, 0x7fa2dc351340) = 0
+1409  write(4, "2458.683\n", 9)         = 9
+1409  exit_group(0)                     = ?
+1409  +++ exited with 0 +++
+1407  <... read resumed>0x7fffdd06d3c0, 4096) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+1407  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1409, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+1407  read(0, "46.3 466.24\n", 4096)    = 12
+1407  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f8174c31650) = 1410
+1410  read(3,  <unfinished ...>
+1407  write(4, "46.3 466.24\n\00043\n\0\3\0\0\200\3\0\0\200\3\0\0\200\3\0\0"..., 255) = 255
+1410  <... read resumed>"46.3 466.24\n\00043\n\0\3\0\0\200\3\0\0\200\3\0\0\200\3\0\0"..., 255) = 255
+1410  execve("child.out", [" ", "os2\n", "46.3 466.24\n"], 0x7fffe5918928 /* 19 vars */ <unfinished ...>
+1407  read(0,  <unfinished ...>
+1410  <... execve resumed>)             = 0
+1410  arch_prctl(0x3001 /* ARCH_??? */, 0x7fffe43f5660) = -1 EINVAL (Invalid argument)
+1410  mmap(NULL, 32530, PROT_READ, MAP_PRIVATE, 4, 0) = 0x7f0053481000
+1410  read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360q\2\0\0\0\0\0"..., 832) = 832
+1410  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f0053440000
+1410  mmap(NULL, 2036952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x7f0053240000
+1410  mmap(0x7f0053265000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x25000) = 0x7f0053265000
+1410  mmap(0x7f00533dd000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x19d000) = 0x7f00533dd000
+1410  mmap(0x7f0053428000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x1e7000) = 0x7f0053428000
+1410  mmap(0x7f005342e000, 13528, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f005342e000
+1410  arch_prctl(ARCH_SET_FS, 0x7f0053441540) = 0
+1410  write(4, "512.540\n", 8)          = 8
+1410  exit_group(0)                     = ?
+1410  +++ exited with 0 +++
+1407  <... read resumed>0x7fffdd06d3c0, 4096) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+1407  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1410, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+1407  read(0, "*\n", 4096)              = 2
+1407  exit_group(0)                     = ?
+1407  +++ exited with 0 +++
